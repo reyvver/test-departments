@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "qhkcMnXte2C15CFfTBXqzkdAu1dkD8V/hP4fQ6Uj8KGYdr2PoX9NoAO+XSfnjQMohnN1fBFuzcme++RT3NPBlA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\reyvver\\Documents\\GitHub\\test-departments\\test-departments\\dep-library\\dep-library.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\reyvver\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\reyvver\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

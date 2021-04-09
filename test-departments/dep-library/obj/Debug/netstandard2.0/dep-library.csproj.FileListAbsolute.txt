@@ -1,0 +1,9 @@
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\dep-library\bin\Debug\netstandard2.0\dep-library.deps.json
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\dep-library\bin\Debug\netstandard2.0\dep-library.dll
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\dep-library\bin\Debug\netstandard2.0\dep-library.pdb
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\dep-library\obj\Debug\netstandard2.0\dep-library.AssemblyInfoInputs.cache
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\dep-library\obj\Debug\netstandard2.0\dep-library.AssemblyInfo.cs
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\dep-library\obj\Debug\netstandard2.0\dep-library.csproj.CoreCompileInputs.cache
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\dep-library\obj\Debug\netstandard2.0\dep-library.dll
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\dep-library\obj\Debug\netstandard2.0\dep-library.pdb
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\dep-library\obj\Debug\netstandard2.0\dep-library.csprojAssemblyReference.cache

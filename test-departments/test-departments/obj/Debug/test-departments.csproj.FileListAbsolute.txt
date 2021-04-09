@@ -1,0 +1,13 @@
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\test-departments\bin\Debug\test-departments.exe.config
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\test-departments\bin\Debug\test-departments.exe
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\test-departments\bin\Debug\test-departments.pdb
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\test-departments\bin\Debug\dep-library.dll
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\test-departments\bin\Debug\dep-library.pdb
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\test-departments\obj\Debug\test-departments.csprojAssemblyReference.cache
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\test-departments\obj\Debug\test_departments.Form1.resources
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\test-departments\obj\Debug\test_departments.Properties.Resources.resources
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\test-departments\obj\Debug\test-departments.csproj.GenerateResource.cache
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\test-departments\obj\Debug\test-departments.csproj.CoreCompileInputs.cache
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\test-departments\obj\Debug\test-departments.csproj.CopyComplete
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\test-departments\obj\Debug\test-departments.exe
+C:\Users\reyvver\Documents\GitHub\test-departments\test-departments\test-departments\obj\Debug\test-departments.pdb
