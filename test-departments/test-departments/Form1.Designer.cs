@@ -38,6 +38,8 @@
             this.columnHeaderNextDepK = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderStampI = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderStampJ = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderNextDepP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderStampS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderStampT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderStampR = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.checkBoxInline = new System.Windows.Forms.CheckBox();
@@ -47,10 +49,7 @@
             this.labelEnd = new System.Windows.Forms.Label();
             this.labelStart = new System.Windows.Forms.Label();
             this.buttonVasya = new System.Windows.Forms.Button();
-            this.textBoxCheckDep = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.columnHeaderNextDepP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderStampS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.labelResult = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label_dep_count
@@ -114,7 +113,7 @@
             this.listViewDeps.HideSelection = false;
             this.listViewDeps.Location = new System.Drawing.Point(402, 0);
             this.listViewDeps.Name = "listViewDeps";
-            this.listViewDeps.Size = new System.Drawing.Size(813, 449);
+            this.listViewDeps.Size = new System.Drawing.Size(813, 561);
             this.listViewDeps.TabIndex = 5;
             this.listViewDeps.UseCompatibleStateImageBehavior = false;
             this.listViewDeps.View = System.Windows.Forms.View.Details;
@@ -131,25 +130,31 @@
             // 
             // columnHeaderStampI
             // 
-            this.columnHeaderStampI.DisplayIndex = 3;
             this.columnHeaderStampI.Text = "StampI";
             this.columnHeaderStampI.Width = 80;
             // 
             // columnHeaderStampJ
             // 
-            this.columnHeaderStampJ.DisplayIndex = 4;
             this.columnHeaderStampJ.Text = "StampJ";
             this.columnHeaderStampJ.Width = 80;
             // 
+            // columnHeaderNextDepP
+            // 
+            this.columnHeaderNextDepP.Text = "nextDepP";
+            this.columnHeaderNextDepP.Width = 80;
+            // 
+            // columnHeaderStampS
+            // 
+            this.columnHeaderStampS.Text = "StampS";
+            this.columnHeaderStampS.Width = 80;
+            // 
             // columnHeaderStampT
             // 
-            this.columnHeaderStampT.DisplayIndex = 7;
             this.columnHeaderStampT.Text = "StampT";
             this.columnHeaderStampT.Width = 80;
             // 
             // columnHeaderStampR
             // 
-            this.columnHeaderStampR.DisplayIndex = 6;
             this.columnHeaderStampR.Text = "StampR";
             this.columnHeaderStampR.Width = 80;
             // 
@@ -224,42 +229,21 @@
             this.buttonVasya.UseVisualStyleBackColor = true;
             this.buttonVasya.Click += new System.EventHandler(this.buttonVasya_Click);
             // 
-            // textBoxCheckDep
+            // labelResult
             // 
-            this.textBoxCheckDep.Location = new System.Drawing.Point(208, 216);
-            this.textBoxCheckDep.Name = "textBoxCheckDep";
-            this.textBoxCheckDep.Size = new System.Drawing.Size(100, 22);
-            this.textBoxCheckDep.TabIndex = 14;
-            this.textBoxCheckDep.Text = "-";
-            this.textBoxCheckDep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 219);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 17);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Отслеживать отдел";
-            // 
-            // columnHeaderNextDepP
-            // 
-            this.columnHeaderNextDepP.DisplayIndex = 7;
-            this.columnHeaderNextDepP.Text = "nextDepP";
-            this.columnHeaderNextDepP.Width = 80;
-            // 
-            // columnHeaderStampS
-            // 
-            this.columnHeaderStampS.Text = "StampS";
-            this.columnHeaderStampS.Width = 80;
+            this.labelResult.AutoSize = true;
+            this.labelResult.Location = new System.Drawing.Point(35, 447);
+            this.labelResult.Name = "labelResult";
+            this.labelResult.Size = new System.Drawing.Size(13, 17);
+            this.labelResult.TabIndex = 15;
+            this.labelResult.Text = "-";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1215, 449);
-            this.Controls.Add(this.textBoxCheckDep);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1215, 561);
+            this.Controls.Add(this.labelResult);
             this.Controls.Add(this.buttonVasya);
             this.Controls.Add(this.textBoxEnd);
             this.Controls.Add(this.textBoxStart);
@@ -302,10 +286,9 @@
         private System.Windows.Forms.Label labelEnd;
         private System.Windows.Forms.Label labelStart;
         private System.Windows.Forms.Button buttonVasya;
-        private System.Windows.Forms.TextBox textBoxCheckDep;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ColumnHeader columnHeaderNextDepP;
         private System.Windows.Forms.ColumnHeader columnHeaderStampS;
+        private System.Windows.Forms.Label labelResult;
     }
 }
 

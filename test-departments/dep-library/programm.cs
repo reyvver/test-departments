@@ -37,6 +37,8 @@ namespace dep_library
                         nextDepK = k + 1;
                         if (k + 2 <= N)
                             nextDepP = k + 2;
+                        else
+                            nextDepP = 1;
                     }
                     else
                     {
@@ -44,6 +46,11 @@ namespace dep_library
                         nextDepP = RandNumber(N);
                     }
                 }
+                
+                if (k == N && !inline)
+                    nextDepK = RandNumber(N);
+                    nextDepP = RandNumber(N);
+
 
                 Department newDep = new Department(k, nextDepK, i, j);
                 newDep.Rool = rool;
@@ -124,24 +131,38 @@ namespace dep_library
             return result;
         }
 
-        public void VasyaIsGoing(int A, int Z)
+        public string VasyaIsGoing(int A, int Z)
         {
+            stamps.Clear();
+
             int nexDep = A;
             int currentDep = A;
             int previousindex = -1;
+            bool isInfinite = false;
+            bool stampSMarked = false;
 
-            do
+            while (nexDep == -1 || currentDep != Z)
             {
+                //если дошли до последнего отдела при Inline
+                if (nexDep == -1)
+                    break;
+
                 currentDep = deps[nexDep - 1].DepartmentId;
 
-                if (nexDep == previousindex)
+
+                //если правило отдела - условное 
+                if (deps[nexDep - 1].Rool && stamps.ContainsKey(deps[nexDep - 1].StampIdS))
                 {
-                    Console.WriteLine("Бесконечный цикл");
-                    break;
+                    // и есть незачеркнутая печать S
+                    if (stamps[deps[nexDep - 1].StampIdS])
+                        stampSMarked = true;
+                    else
+                        stampSMarked = false;
+
                 }
 
                 // если правило отдела безусловное 
-                if (!deps[nexDep - 1].Rool)
+                if (!deps[nexDep - 1].Rool || !stampSMarked)
                 {
                     // если в листе нету печати I или печать I зачеркнута
                     if (!stamps.ContainsKey(deps[nexDep - 1].StampIdI) || stamps[deps[nexDep - 1].StampIdI] == false)
@@ -172,12 +193,43 @@ namespace dep_library
                     // отправляем Васю в след отдел
                     nexDep = deps[nexDep - 1].NextDepP;
                 }
+
+
+                if (nexDep == previousindex || currentDep == previousindex)
+                {
+                    Console.WriteLine("loop");
+                    isInfinite = true;
+                    break;
+                }
+
                 previousindex = currentDep;
-                //Console.WriteLine("След отд" + (nexDep).ToString());
-                //Console.WriteLine("AA" + (nexDep == -1).ToString());
-                //Console.WriteLine("BB" + (currentDep == Z).ToString());
+
+            };
+
+            if (!isInfinite)
+                return GetStampsData();
+            else
+                return "Вася застрял навечно в бюрократической машине";
+        }
+
+        public string GetStampsData()
+        {
+            string result = "";
+            string status;
+
+            foreach (var stamp in stamps)
+            {
+                if (stamp.Value)
+                    status = "не зачеркнута";
+                else
+                    status = "зачеркнута";
+
+                result += "stamp № "  + stamp.Key +" status - " + status + "\n";
+
             }
-            while (nexDep == -1 || currentDep!=Z);
+
+
+            return result;
         }
 
     }

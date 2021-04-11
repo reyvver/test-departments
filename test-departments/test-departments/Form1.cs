@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using dep_library;
@@ -22,7 +23,7 @@ namespace test_departments
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            if (CheckIfNumbers(textBoxDepCount) && CheckIfNumbers(textBoxStampCount) && CheckIfNumbers(textBoxStart) && CheckIfNumbers(textBoxEnd))
+            if (CheckIfNumbers(textBoxDepCount, true) && CheckIfNumbers(textBoxStampCount, true) && CheckIfNumbers(textBoxStart) && CheckIfNumbers(textBoxEnd, true))
             {
                 int N = Convert.ToInt32(textBoxDepCount.Text);
                 int M = Convert.ToInt32(textBoxStampCount.Text);
@@ -32,7 +33,7 @@ namespace test_departments
                 buttonVasya.Enabled = true;
             }
             else
-                MessageBox.Show("Только цифры!", "Ошибка входных данных", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Некорректные данные (числа должны быть >=1)!", "Ошибка входных данных", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void StartProg(int N, int M)
@@ -99,13 +100,16 @@ namespace test_departments
             CheckBoxesStates(false, checkBoxRandom.Checked);
         }
 
-        private bool CheckIfNumbers(TextBox txt)
+        private bool CheckIfNumbers(TextBox txt, bool checkValue = false)
         {
             var result = 0;
 
             if (int.TryParse(txt.Text, out result))
             {
-                return true;
+                if (result <= 1 && checkValue)
+                    return false;
+                else
+                    return true;
             }
             else
             {
@@ -118,8 +122,19 @@ namespace test_departments
             int A = Convert.ToInt32(textBoxStart.Text);
             int Z = Convert.ToInt32(textBoxEnd.Text);
 
+            labelResult.Text = "";
 
-            current_prog.VasyaIsGoing(A, Z);
+            Thread newThd = new Thread(()=> { Vasya(A, Z); });
+            newThd.Start();
+
+        }
+
+        async void Vasya(int A, int Z)
+        {
+            labelResult.Invoke(new Action(() =>
+            {
+                labelResult.Text = current_prog.VasyaIsGoing(A, Z);
+            }));
 
         }
     }
