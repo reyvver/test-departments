@@ -122,7 +122,7 @@ namespace test_departments
             int A = Convert.ToInt32(textBoxStart.Text);
             int Z = Convert.ToInt32(textBoxEnd.Text);
 
-            labelResult.Text = "";
+            textBoxResult.Text = "";
 
             Thread newThd = new Thread(()=> { Vasya(A, Z); });
             newThd.Start();
@@ -131,9 +131,9 @@ namespace test_departments
 
         async void Vasya(int A, int Z)
         {
-            labelResult.Invoke(new Action(() =>
+            textBoxResult.Invoke(new Action(() =>
             {
-                labelResult.Text = current_prog.VasyaIsGoing(A, Z);
+                textBoxResult.Text = current_prog.VasyaIsGoing(A, Z);
             }));
 
         }

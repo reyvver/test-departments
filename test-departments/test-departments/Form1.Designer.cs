@@ -49,7 +49,7 @@
             this.labelEnd = new System.Windows.Forms.Label();
             this.labelStart = new System.Windows.Forms.Label();
             this.buttonVasya = new System.Windows.Forms.Button();
-            this.labelResult = new System.Windows.Forms.Label();
+            this.textBoxResult = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label_dep_count
@@ -90,7 +90,7 @@
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(35, 367);
+            this.buttonStart.Location = new System.Drawing.Point(34, 312);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(142, 57);
             this.buttonStart.TabIndex = 3;
@@ -163,7 +163,7 @@
             this.checkBoxInline.AutoSize = true;
             this.checkBoxInline.Checked = true;
             this.checkBoxInline.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxInline.Location = new System.Drawing.Point(35, 263);
+            this.checkBoxInline.Location = new System.Drawing.Point(34, 208);
             this.checkBoxInline.Name = "checkBoxInline";
             this.checkBoxInline.Size = new System.Drawing.Size(63, 21);
             this.checkBoxInline.TabIndex = 6;
@@ -174,7 +174,7 @@
             // checkBoxRandom
             // 
             this.checkBoxRandom.AutoSize = true;
-            this.checkBoxRandom.Location = new System.Drawing.Point(35, 303);
+            this.checkBoxRandom.Location = new System.Drawing.Point(34, 248);
             this.checkBoxRandom.Name = "checkBoxRandom";
             this.checkBoxRandom.Size = new System.Drawing.Size(253, 21);
             this.checkBoxRandom.TabIndex = 7;
@@ -221,7 +221,7 @@
             // buttonVasya
             // 
             this.buttonVasya.Enabled = false;
-            this.buttonVasya.Location = new System.Drawing.Point(224, 367);
+            this.buttonVasya.Location = new System.Drawing.Point(223, 312);
             this.buttonVasya.Name = "buttonVasya";
             this.buttonVasya.Size = new System.Drawing.Size(142, 57);
             this.buttonVasya.TabIndex = 12;
@@ -229,21 +229,21 @@
             this.buttonVasya.UseVisualStyleBackColor = true;
             this.buttonVasya.Click += new System.EventHandler(this.buttonVasya_Click);
             // 
-            // labelResult
+            // textBoxResult
             // 
-            this.labelResult.AutoSize = true;
-            this.labelResult.Location = new System.Drawing.Point(35, 447);
-            this.labelResult.Name = "labelResult";
-            this.labelResult.Size = new System.Drawing.Size(13, 17);
-            this.labelResult.TabIndex = 15;
-            this.labelResult.Text = "-";
+            this.textBoxResult.Location = new System.Drawing.Point(35, 396);
+            this.textBoxResult.Multiline = true;
+            this.textBoxResult.Name = "textBoxResult";
+            this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxResult.Size = new System.Drawing.Size(331, 153);
+            this.textBoxResult.TabIndex = 16;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1215, 561);
-            this.Controls.Add(this.labelResult);
+            this.Controls.Add(this.textBoxResult);
             this.Controls.Add(this.buttonVasya);
             this.Controls.Add(this.textBoxEnd);
             this.Controls.Add(this.textBoxStart);
@@ -288,7 +288,7 @@
         private System.Windows.Forms.Button buttonVasya;
         private System.Windows.Forms.ColumnHeader columnHeaderNextDepP;
         private System.Windows.Forms.ColumnHeader columnHeaderStampS;
-        private System.Windows.Forms.Label labelResult;
+        private System.Windows.Forms.TextBox textBoxResult;
     }
 }
 

@@ -144,7 +144,7 @@ namespace dep_library
             while (nexDep == -1 || currentDep != Z)
             {
                 //если дошли до последнего отдела при Inline
-                if (nexDep == -1)
+                if (nexDep == -1 || isInfinite)
                     break;
 
                 currentDep = deps[nexDep - 1].DepartmentId;
@@ -209,7 +209,7 @@ namespace dep_library
             if (!isInfinite)
                 return GetStampsData();
             else
-                return "Вася застрял навечно в бюрократической машине";
+                return "Вася застрял навечно в бюрократической машине или не дошел до конечного отдела";
         }
 
         public string GetStampsData()
@@ -224,7 +224,7 @@ namespace dep_library
                 else
                     status = "зачеркнута";
 
-                result += "stamp № "  + stamp.Key +" status - " + status + "\n";
+                result += "stamp № "  + stamp.Key +" status - " + status + "; \r\n";
 
             }
 
